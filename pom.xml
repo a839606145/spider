@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jlspider</groupId>
+  <artifactId>jlspider</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>jlspider Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+   <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.2.RELEASE</version>
+    </parent>
+  <dependencies>
+  
+    <!-- 添加SpringBoot依赖 -->
+	<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-test</artifactId>
+	    <version>2.0.6.RELEASE</version>
+	    <scope>test</scope>
+	</dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-web</artifactId>
+	    <version>2.0.6.RELEASE</version>
+	</dependency>
+    
+    <!-- 添加selenium依赖 -->
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+	<dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-java</artifactId>
+	    <version>3.14.0</version>
+	</dependency>
+    <!-- 添加webmagic依赖 -->
+    <!-- https://mvnrepository.com/artifact/us.codecraft/webmagic-core -->
+	<dependency>
+	    <groupId>us.codecraft</groupId>
+	    <artifactId>webmagic-core</artifactId>
+	    <version>0.7.3</version>
+	    <exclusions>
+		    <exclusion>
+		        <groupId>org.slf4j</groupId>
+		        <artifactId>slf4j-log4j12</artifactId>
+		    </exclusion>
+		</exclusions>
+	</dependency>
+	<dependency>
+	    <groupId>us.codecraft</groupId>
+	    <artifactId>webmagic-extension</artifactId>
+	    <version>0.7.3</version>
+	</dependency>
+	<!--  
+	 https://mvnrepository.com/artifact/us.codecraft/webmagic-selenium
+	<dependency>
+	    <groupId>us.codecraft</groupId>
+	    <artifactId>webmagic-selenium</artifactId>
+	    <version>0.7.3</version>
+	</dependency>
+    -->
+    <dependency>  
+	    <groupId>com.google.guava</groupId>  
+	    <artifactId>guava</artifactId>  
+	    <version>22.0</version>  
+	</dependency>
+    <!-- 添加Jsoup依赖 -->
+    <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+	<dependency>
+		<groupId>org.jsoup</groupId>
+		<artifactId>jsoup</artifactId>
+		<version>1.9.2</version>
+	</dependency>
+    
+    
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>jlspider</finalName>
+    <plugins>
+         <plugin>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-maven-plugin</artifactId>
+         </plugin>
+     </plugins>
+  </build>
+</project>
