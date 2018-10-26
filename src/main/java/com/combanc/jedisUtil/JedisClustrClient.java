@@ -7,6 +7,7 @@ import redis.clients.jedis.JedisCluster;
 public class JedisClustrClient implements JedisInterface{
 	
 	private JedisCluster jedisCluster;
+	
 	public JedisClustrClient(JedisCluster jedisCluster){
 		this.jedisCluster=jedisCluster;
 	}
