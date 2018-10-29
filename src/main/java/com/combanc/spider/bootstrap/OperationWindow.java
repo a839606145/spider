@@ -1,4 +1,4 @@
-package com.combanc.main;
+package com.combanc.spider.bootstrap;
 
 import java.io.File;
 

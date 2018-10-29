@@ -1,9 +1,6 @@
-package com.combanc.main;
+package com.combanc.spider.bootstrap;
 
-import com.combanc.Process.XpathTestProcess;
-import com.combanc.Process.ZLProcess;
-
-import us.codecraft.xsoup.xevaluator.XPathParser;
+import com.combanc.spider.process.XpathTestProcess;
 
 public class Bootstrap {
 

@@ -1,4 +1,4 @@
-package com.combanc.main;
+package com.combanc.spider.bootstrap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

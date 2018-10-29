@@ -1,4 +1,4 @@
-package com.combanc.Process;
+package com.combanc.spider.process;
 
 import java.util.List;
 
