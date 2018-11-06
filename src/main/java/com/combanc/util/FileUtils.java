@@ -3,6 +3,7 @@ package com.combanc.util;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -105,6 +106,40 @@ public class FileUtils {
 			if(out!=null){
 				try {
 					out.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	/**
+	 * 
+	 * @param fileName
+	 * @param path
+	 * @param inputStream
+	 */
+	public static void writeFile(String fileName,String path,byte[] inputStream){
+		FileOutputStream fileOutputStream=null;
+		ByteArrayOutputStream output = null;
+		try{
+			fileOutputStream = new FileOutputStream(new File(path+File.separator
+					+fileName));
+			output = new ByteArrayOutputStream();
+			output.write(inputStream, 0, inputStream.length);
+			fileOutputStream.write(output.toByteArray());
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			if(output!=null){
+				try {
+					output.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if(fileOutputStream!=null){
+				try {
+					fileOutputStream.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

@@ -31,7 +31,7 @@
 	    <version>2.0.6.RELEASE</version>
 	</dependency>
     
-    <!-- 添加selenium依赖 -->
+    <!-- 添加selenium依赖  自动化测试   用于模拟登陆-->
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 	<dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
@@ -39,7 +39,7 @@
 	    <version>3.14.0</version>
 	</dependency>
     <!-- 添加webmagic依赖 -->
-    <!-- https://mvnrepository.com/artifact/us.codecraft/webmagic-core -->
+    <!-- https://mvnrepository.com/artifact/us.codecraft/webmagic-core  爬虫-->
 	<dependency>
 	    <groupId>us.codecraft</groupId>
 	    <artifactId>webmagic-core</artifactId>
@@ -89,13 +89,32 @@
 	    <artifactId>mysql-connector-java</artifactId>
 	    <version>5.1.46</version>
 	</dependency>
-    
+	   <!-- https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/weka-dev 机器学习方法 -->
+	<dependency>
+	    <groupId>nz.ac.waikato.cms.weka</groupId>
+	    <artifactId>weka-dev</artifactId>
+	    <version>3.9.0</version>
+	</dependency>
+	    
+	    <!-- https://mvnrepository.com/artifact/com.hankcs/hanlp 自然语言处理 -->
+		<dependency>
+		    <groupId>com.hankcs</groupId>
+		    <artifactId>hanlp</artifactId>
+		    <version>portable-1.6.8</version>
+		</dependency>
+			    
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+  <dependency>
+    <groupId>cn.xm</groupId>
+    <artifactId>similarity</artifactId>
+    <version>1.0.0</version>
+</dependency>
+
   </dependencies>
   <build>
     <finalName>jlspider</finalName>
